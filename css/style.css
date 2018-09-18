@@ -1,0 +1,153 @@
+h1,h2,h3,p{
+	font-family: Lato;
+}
+.overlay{
+/*	position: absolute;
+	min-height: 100%;
+	min-width: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(244, 244, 244, 0.79);*/
+}
+section{
+	margin: 50px 0;
+}
+.section-grey{
+	padding: 50px 0;
+	background-color: #f0f7ff;
+}
+.head-title{
+  color: #1a3c7b; 
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+}
+.sub-title{
+	font-size:30px;
+	text-align:center;
+}
+.yellow-line{
+	height: 4px;
+  background-color: #e0cb0b;
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+.bloc-avantage h3{
+	color: #1a3c7b;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: bold;
+  min-height: 45px;
+}
+.img-center{
+	margin: 0 auto;
+  display: block;
+}
+.space100{
+	height: 100px;
+}
+.space50{
+	height: 50px;
+}
+/**Section Rejoinez nous**/
+.background-white{
+	background-color:white;
+}
+.background-blue-light{
+	background-color: rgba(37, 108, 162, 0.65);
+	color: white;
+}
+.steps-list{
+	padding: 15px 0 30px 0;
+	text-align: center;
+}
+.step-number{
+	color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 60px;
+  border-bottom: 3px solid white;
+	display: inline-block;
+	margin-bottom: 1.2rem;
+}
+.yellow-line-border{
+	border-bottom: 3px solid #e0cb0b;
+}
+.line-left{
+  height: 4px;
+  background-color: #e0cb0b;
+	width: 100px;
+	margin-top: 25px;
+  display: block; 
+}
+.steps-list h2{
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.steps-list p{
+	text-align: center;
+}
+.text-blue{
+	color: #00468b;
+}	
+.text-black{
+	color: black;
+}
+.btn-inscrit-yellow{
+	color: #00468b;
+  background-color: #ffe500;
+  border-radius: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: -1px;
+  padding: 7px 40px;
+}
+.big-title{
+	font-size: 27px;
+	text-align: left;
+	color: #00468b;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+.corner{
+	display: block;
+  height: 55px;
+  width: 55px;
+}
+.top-corner{
+	display: block;
+  height: 55px;
+  width: 55px;
+  border-top: 6px solid #1a3c7b;
+  border-left: 6px solid #1a3c7b;
+  position: absolute;
+  left: -5px;
+  top: -36px;
+}
+/**Contact Form**/
+ .contact-form{
+	margin: 6em 0;
+	position: relative;  
+ }
+ .contact-form h1{
+	padding:2em 1px;
+	color: #F97300; 
+ }
+ .contact-form .right{
+	max-width: 600px;
+ }
+ .contact-form .right .btn-secondary{
+	background:  #F97300;
+	color: #fff;
+	border:0;
+ }
+ .contact-form .right .form-control::placeholder{
+	color: #888;
+	font-size: 16px;
+ }
