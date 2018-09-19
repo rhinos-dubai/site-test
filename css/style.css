@@ -10,6 +10,28 @@
 	font-family: "CAMetroBold";
 	src: url(../fonts/CAMetro-Bold.ttf);
 }
+@font-face {
+	font-family: "CAMetroRegular";
+	src: url(../fonts/CAMetro-Regular.ttf);
+}
+@font-face {
+	font-family: "CAMetroExtraBold";
+	src: url(../fonts/CAMetro-ExtraBold.ttf);
+}
+@font-face {
+	font-family: "LatoHeavy";
+	src: url(../fonts/Lato-Heavy.ttf);
+}
+@font-face {
+	font-family: "LatoItalic";
+	src: url(../fonts/Lato-Italic.ttf);
+}
+@font-face {
+	font-family: "LatoRegular";
+	src: url(../fonts/Lato-Regular.ttf);
+}
+
+
 h1,h2,h3,p{
 	font-family: Lato;
 }
@@ -82,16 +104,22 @@ section{
   margin: 0 auto;
   display: block;
 }
-.bloc-avantage h3{
-	font-family: "CAMetroBold";
-	color: #004786;
-  font-size: 18px;
-  line-height: 24px;
-  text-align: center;
-  min-height: 45px;
+.bloc-avantage{
+	margin-bottom: 20px;
 }
+.bloc-avantage h3{
+	font-size: 20px; 
+	color: rgb(0, 71, 134);
+	font-weight: bold;
+	line-height: 1.25;
+	font-family: "CAMetroExtraBold";
+	text-align: center;
+	margin-top: 10px;
+ }
 .bloc-avantage p{
 	text-align: center;
+	font-family: "CAMetroRegular";
+ font-size:15px;
 }
 .img-center{
 	margin: 0 auto;
@@ -123,13 +151,14 @@ background-image: url(../images/advantage1-bg.jpg);
 	background-color:white;
 }
 .steps-list{
-	padding: 15px 0 30px 0;
+	padding:0 0 30px 0;
 	text-align: center;
 }
 .step-number{
 	color: white; 
+	line-height: 1.2;
   text-align: center;
-  font-size: 86px;
+  font-size: 65px;
   border-bottom: 3px solid white;
 	display: inline-block;
 	margin-bottom: 15px;
@@ -150,10 +179,12 @@ background-image: url(../images/advantage1-bg.jpg);
 	text-transform: uppercase;
 	font-family: "CAMetroBold";
 	color:white;
+	margin-bottom: 35px;
 }
 .steps-list p{
 	text-align: center;
 	font-size: 15px;
+	font-family:"LatoRegular";
 }
 .text-blue{
 	color: #004786!important;
@@ -190,14 +221,14 @@ background-image: url(../images/advantage1-bg.jpg);
 	position: absolute;
 }
 .top-corner{ 
-  border-top: 6px solid #1a3c7b;
-  border-left: 6px solid #1a3c7b;
-  left: -5px;
-  top: -36px;
+  border-top: 8px solid #1a3c7b;
+  border-left: 8px solid #1a3c7b;
+	left: -10px;
+  top: -27px;
 }
 .bottom-corner{
-	border-bottom: 6px solid #1a3c7b;
-  border-right: 6px solid #1a3c7b;
+	border-bottom: 8px solid #1a3c7b;
+  border-right: 8px solid #1a3c7b;
 	right: -20px;
   bottom: -7px;
 }
@@ -237,9 +268,22 @@ background-image: url(../images/advantage1-bg.jpg);
  }
  /**Formulaire**/
  .stepwizard-step p {
-	margin-top: 10px;
+	margin-top: 25px;
+	font-size: 18px; 
+  color: rgb(44, 46, 55);
+  line-height: 1.333;
+	text-align: center; 
+	font-family:"LatoRegular";
 }
-
+.form-iscriptions .nextBtn{
+	border-radius: 0;
+  text-transform: uppercase;
+  padding: 10px 45px;
+  box-shadow: none;
+  border: none;
+	font-weight: 500;
+	margin-right: 15px;
+}
 .stepwizard-row {
 	display: table-row;
 }
@@ -256,32 +300,171 @@ background-image: url(../images/advantage1-bg.jpg);
 }
 
 .stepwizard-row:before {
-	top: 14px;
-	bottom: 0;
-	position: absolute;
-	content: " ";
-	width: 100%;
-	height: 1px;
-	background-color: #ccc;
-	z-order: 0;
-
+	border-width: 4.71px;
+  border-color: rgb(230, 230, 230);
+  border-style: dotted;
+  border-top: 1px;
+  width: 100%;
+  height: 0;
+  top: 19px;
+  bottom: 0;
+  position: absolute;
+  content: " "; 
 }
-
+ 
 .stepwizard-step {
 	display: table-cell;
 	text-align: center;
 	position: relative;
 }
-
 .btn-circle {
-width: 30px;
-height: 30px;
-text-align: center;
-padding: 6px 0;
-font-size: 12px;
-line-height: 1.428571429;
-border-radius: 15px;
+  border-width: 3px;
+  border-color: rgb(0, 71, 134);
+  border-style: solid;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+	font-size: 16px;
+	font-family: "Roboto";
+	color: rgb(0, 71, 134);
+	text-transform: uppercase; 
+	text-align: center;
 }
+.form-iscriptions input{
+	color: #b9b9b9;
+	font-size:15px;
+	padding-left:15px;
+	font-family : "LatoRegular";
+	margin-bottom: 35px;
+	height: 33px;
+	width: 96%;
+  margin-left: 5px;
+	border-width: 0.66px;
+  border-color: rgb(168, 165, 165);
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+}
+.form-iscriptions .required-input{
+	color: rgb(185, 185, 185);
+	position: absolute;
+  left: 2px;
+  top: 6px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.has-error .required-input{
+	color: #a94442;
+}
+/**temoinage**/
+.temoinage blockquote{
+	font-size: 18px;
+	text-align: justify;
+  font-family: "Lato";
+  color: rgb(51, 51, 51);
+  line-height: 1.833;
+  padding: 0px;
+  margin: 10px 0px 20px;
+  border-left: none;
+}
+.temoinage blockquote .quote{
+		font-size: 122px;
+		font-family: "CAMetroRegular";
+		color: rgb(0, 71, 134);
+		line-height: 0.27;
+		position: absolute;
+		left: 5px;
+		top: -4px;
+}
+.pm-name-customer{ 
+	font-size:15px;
+	font-weight: bold;
+  font-family: "Lato";
+  color: #004786;
+  line-height: 1;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.pm-position-customer{
+	font-size: 15px;
+  font-family: "Lato";
+  color: #022222;
+  line-height: 1.333;
+  margin-top: 8px;
+}
+/**Flip hover**/
+.flip-container {
+	height:250px!important;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+}
+
+	.flip-container:hover .flipper,  
+  .flip-container.hover .flipper {
+		cursor: pointer;
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+	.flip-container,.flipper{
+		position:relative;
+		height: 100%;
+	}
+.flip-container, .front, .back {
+	width: 100%;
+  height: 100%;
+}
+
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+  -o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front {
+	/*background: url(http://davidwalsh.name/demo/dwflip.jpg) 0 0 no-repeat;*/
+	z-index: 2;
+}
+.back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	background-color: rgb(0, 45, 114);
+}
+.back-logo {
+  position: absolute;
+  top: 32px;
+  left: -44px;
+  width: 142px;
+  height: 222px;
+  background: url(../images/back-icon-av1.png) 0 0 no-repeat;
+}
+
+.back p {
+	padding: 55px 26px;
+  font-size: 15px;
+  font-family: "CAMetroRegular";
+  color: rgb(255, 255, 255);
+  line-height: 1.667;
+  text-align: center;
+}
+
  @media (min-width: 1200px){
 .container {
   max-width: 1140px;

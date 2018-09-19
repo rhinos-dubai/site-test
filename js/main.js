@@ -22,7 +22,7 @@ $(document).ready(function(){
             $item.addClass('btn-primary');
             allWells.hide();
             $target.show();
-            $target.find('input:eq(0)').focus();
+           // $target.find('input:eq(0)').focus();
         }
     });
 
