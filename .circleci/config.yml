@@ -34,7 +34,7 @@ jobs:
               yarn run gulp build 
               ls
               echo "167.99.214.238 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIXy6GkHzgAhKZogRH1FGcxSlNNh7PP8uSLUtJ1GPcgdUIlVmrW14+jlprWdO6JVsct3EwZ7HPM2TTWaPu9NCcY=" >> ~/.ssh/known_hosts
-              cd dist && scp -r  . root@167.99.214.238:/var/www/html                        
+              cd public && scp -r  . root@167.99.214.238:/var/www/html                        
 workflows:
    version: 2
    build-deploy:
