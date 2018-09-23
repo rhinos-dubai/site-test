@@ -32,8 +32,7 @@ jobs:
               yarn install
               mkdir public
               yarn run gulp build 
-              ls
-              echo "167.99.214.238 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIXy6GkHzgAhKZogRH1FGcxSlNNh7PP8uSLUtJ1GPcgdUIlVmrW14+jlprWdO6JVsct3EwZ7HPM2TTWaPu9NCcY=" >> ~/.ssh/known_hosts
+              echo "167.99.214.238 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFKxr7K+ak28gr/cGFHSc3KTSPkgx9g5ENTtHed+Lc1f0cXP83QbobLONY20AStf5APcGNahUkoGNLnNx4AY3vI=" >> ~/.ssh/known_hosts
               cd public && scp -r  . root@167.99.214.238:/var/www/html                        
 workflows:
    version: 2
