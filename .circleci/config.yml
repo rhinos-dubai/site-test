@@ -1,0 +1,49 @@
+version: 2
+jobs:
+  build-job:
+      docker:
+        - image: circleci/node:7.10
+      working_directory: /tmp/my-project  
+      steps:
+        - checkout 
+        - run:
+            name: Run Build
+            command: yarn install
+        - run:
+            name: build 
+            command: |
+             mkdir public
+             yarn run gulp build   
+  deploy-droplet-job:
+      docker:
+        - image: circleci/node:7.10
+      working_directory: /tmp/my-project  
+      steps:
+        - checkout 
+        - run:
+              name: switch ssh deploy key to ssh user-machine .
+              command: |
+                  ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
+                  cat ~/.ssh/id_rsa.pub 
+                  ssh-add -d ~/.ssh/id_rsa.pub
+        - run:
+            name: Deploy Master to Droplet
+            command: |
+              yarn install
+              mkdir public
+              yarn run gulp build 
+              ls
+              echo "167.99.214.238 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIXy6GkHzgAhKZogRH1FGcxSlNNh7PP8uSLUtJ1GPcgdUIlVmrW14+jlprWdO6JVsct3EwZ7HPM2TTWaPu9NCcY=" >> ~/.ssh/known_hosts
+              cd dist && scp -r  . root@167.99.214.238:/var/www/html                        
+workflows:
+   version: 2
+   build-deploy:
+     jobs:
+      #  - build-job
+       - deploy-droplet-job:
+          #  requires:
+          
+            #  - build-job
+           filters:
+             branches:
+               only: develop
